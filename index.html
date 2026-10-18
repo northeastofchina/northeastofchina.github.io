@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>northeastofchina · 个人主页</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0d1117;
+      --bg-card: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --accent-hover: #79b8ff;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    /* Header / Hero */
+    .hero {
+      text-align: center;
+      padding: 40px 0 60px;
+    }
+
+    .avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #58a6ff, #1f6feb);
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+      color: white;
+      font-weight: bold;
+      border: 3px solid var(--border);
+    }
+
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .tagline {
+      color: var(--text-muted);
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    .badges {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 0.85em;
+      color: var(--text-muted);
+    }
+
+    /* Section */
+    section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 32px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* About */
+    .about p {
+      color: var(--text);
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+    }
+
+    .skill {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      text-align: center;
+      font-size: 0.95em;
+      transition: all 0.2s;
+    }
+
+    .skill:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* Projects */
+    .project {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project:last-child { border-bottom: none; }
+
+    .project-title {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .project-title:hover { color: var(--accent-hover); }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95em;
+      margin-top: 6px;
+    }
+
+    /* Contact */
+    .contacts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+
+    .contact-item:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .contact-icon { font-size: 1.4em; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85em;
+      margin-top: 40px;
+      padding: 20px 0;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+Agent: main | Model: MiniMax-M3 | Provider: minimax
+      .container { padding: 40px 16px; }
+      h1 { font-size: 1.8em; }
+      section { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="avatar">N</div>
+      <h1>northeastofchina</h1>
+      <p class="tagline">来自中国东北 · 在这里记录学习和生活</p>
+      <div class="badges">
+        <span class="badge">🌏 中国东北</span>
+        <span class="badge">📚 持续学习</span>
+        <span class="badge">🛠️ 用 GitHub 搭建</span>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section class="about">
+      <h2>👋 关于我</h2>
+      <p>这里写一段简短的自我介绍——你是谁，做什么，兴趣是什么。不用太长，3-5 句就够。可以提到你的职业、爱好、正在学的东西。</p>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>🛠️ 我能做什么 / 在学什么</h2>
+      <div class="skills">
+        <div class="skill">技能 1</div>
+        <div class="skill">技能 2</div>
+        <div class="skill">技能 3</div>
+        <div class="skill">技能 4</div>
+        <div class="skill">兴趣 1</div>
+        <div class="skill">兴趣 2</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>📂 项目 / 作品</h2>
+      <div class="project">
+        <a href="#" class="project-title">个人主页</a>
+        <p class="project-desc">用 GitHub Pages 搭建的免费个人网站，今天第一次做出来 ✨</p>
+      </div>
+      <div class="project">
+        <a href="#" class="project-title">更多项目占位</a>
+        <p class="project-desc">以后可以加博客、笔记集合、作品展示等</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2>📬 联系我</h2>
+      <div class="contacts">
+        <a href="mailto:your@email.com" class="contact-item">
+          <span class="contact-icon">📧</span>
+          <span>your@email.com</span>
+        </a>
+        <a href="#" class="contact-item">
+          <span class="contact-icon">💬</span>
+          <span>微信：your-id</span>
+        </a>
+        <a href="https://github.com/northeastofchina" class="contact-item">
+          <span class="contact-icon">🐙</span>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>用 ❤️ 和 GitHub Pages 搭建 · © 2026 northeastofchina</p>
+    </footer>
+
+  </div>
+</body>
+</html>
